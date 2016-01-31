@@ -46,7 +46,7 @@ public class Laucher extends Subsystem {
     }
     
     public void move(int dir) {
-    	drawBackMotor.set(Robot.oi.getoperatorJoystick().getZ() * dir);
+    	drawBackMotor.set(Robot.oi.getoperatorJoystick().getRawAxis(3) * dir);
     }
     
     public void initDefaultCommand() {

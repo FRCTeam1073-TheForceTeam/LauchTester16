@@ -72,7 +72,7 @@ public class Robot extends IterativeRobot {
 
     public void disabledPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("Motor Speed", oi.getoperatorJoystick().getZ());
+        SmartDashboard.putNumber("Motor Speed", oi.getoperatorJoystick().getRawAxis(3));
         if(dir == -1) SmartDashboard.putBoolean("Reverse Direction", true);
         else SmartDashboard.putBoolean("Reverse Direction", false);
     }
@@ -102,7 +102,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putNumber("Motor Speed", oi.getoperatorJoystick().getZ());
+        SmartDashboard.putNumber("Motor Speed", oi.getoperatorJoystick().getRawAxis(3));
         if(dir == -1) SmartDashboard.putBoolean("Reverse Direction", true);
         else SmartDashboard.putBoolean("Reverse Direction", false);
     }
